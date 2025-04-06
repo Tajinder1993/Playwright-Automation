@@ -10,7 +10,7 @@ import { test, expect } from '@playwright/test';
 
 test('test', async ({ page }) => {
 
-    // fetch the correct URL
+    // url of the website
     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
 
     //click on user name text box code to be deleted in final code
@@ -43,5 +43,24 @@ run the code
 ---------------------------------------
 npx playwright test Code_with_Codegen.spec.js
 
+run the code only in chromium web browser
+-------------------------------------------------
+npx playwright test Code_with_Codegen.spec.js --project chromium/webkit/firefox
+
+run in headed mode
+---------------------
+npx playwright test Code_with_Codegen.spec.js --headed
+
+run in headed mode but only in chromium
+-------------------------------------------
+npx playwright test Code_with_Codegen.spec.js --headed --project chromium
+
+to debug the code
+----------------------------
+npx playwright test Code_with_Codegen.spec.js --headed --project chromium --debug
+
+more commands
+-----------------
+npx playwright codegen --help
 
 */
